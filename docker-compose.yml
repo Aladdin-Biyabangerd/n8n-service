@@ -5,13 +5,13 @@ services:
     image: n8nio/n8n
     container_name: n8n_service
     ports:
-      - "${PORT}:${PORT}"   # Railway PORT dəyişənini istifadə et
+      - "5678:5678"   # Railway PORT dəyişənini istifadə et
     environment:
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=admin
       - N8N_BASIC_AUTH_PASSWORD=secret
       - N8N_HOST=0.0.0.0
-      - N8N_PORT=${PORT}
+      - N8N_PORT=5678
       - N8N_EDITOR_BASE_URL=https://updevic-n8n.up.railway.app
       - N8N_EDITOR_UI_URL=https://updevic-n8n.up.railway.app
     volumes:
